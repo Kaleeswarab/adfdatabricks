@@ -1,0 +1,19 @@
+{
+	"name": "DS_ADLF_Binary",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_Industry_adlsadfgitdatabricks_adfsource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "allfiles",
+				"fileSystem": "adfsource"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
