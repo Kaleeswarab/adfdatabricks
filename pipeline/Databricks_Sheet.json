@@ -1,0 +1,28 @@
+{
+	"name": "Databricks_Sheet",
+	"properties": {
+		"activities": [
+			{
+				"name": "DB_Notebook",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/nagendranrajammal@gmail.com/Get-Csv-Files"
+				},
+				"linkedServiceName": {
+					"referenceName": "LS_DB_Unity_Notebook",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
