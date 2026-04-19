@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/nagendranrajammal@gmail.com/Get-Csv-Files"
+					"notebookPath": "/Users/nagendranrajammal@gmail.com/Get-Filtered-Output"
 				},
 				"linkedServiceName": {
 					"referenceName": "LS_DB_Unity_Notebook",
