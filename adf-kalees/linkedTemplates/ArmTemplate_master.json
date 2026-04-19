@@ -1,0 +1,98 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-kalees"
+		},
+		"ADLS_Industry_adlsadfgitdatabricks_adfsource_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLS_Industry_adlsadfgitdatabricks_adfsource'"
+		},
+		"LS_DB_Unity_Notebook_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'LS_DB_Unity_Notebook'"
+		},
+		"LS_SQL_SH_IR_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQL_SH_IR'"
+		},
+		"ADLS_Industry_adlsadfgitdatabricks_adfsource_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsadfgitdatabricks.dfs.core.windows.net/"
+		},
+		"LS_DB_Unity_Notebook_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0419-174839-1s2lnyxu"
+		},
+		"LS_SQL_SH_IR_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "KALEESW-WINDOWS\\SQLEXPRESS"
+		},
+		"LS_SQL_SH_IR_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "adfsqldatabase"
+		},
+		"LS_SQL_SH_IR_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "kaleesadlf"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf-kalees_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ADLS_Industry_adlsadfgitdatabricks_adfsource_accountKey": {
+						"value": "[parameters('ADLS_Industry_adlsadfgitdatabricks_adfsource_accountKey')]"
+					},
+					"LS_DB_Unity_Notebook_accessToken": {
+						"value": "[parameters('LS_DB_Unity_Notebook_accessToken')]"
+					},
+					"LS_SQL_SH_IR_password": {
+						"value": "[parameters('LS_SQL_SH_IR_password')]"
+					},
+					"ADLS_Industry_adlsadfgitdatabricks_adfsource_properties_typeProperties_url": {
+						"value": "[parameters('ADLS_Industry_adlsadfgitdatabricks_adfsource_properties_typeProperties_url')]"
+					},
+					"LS_DB_Unity_Notebook_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('LS_DB_Unity_Notebook_properties_typeProperties_existingClusterId')]"
+					},
+					"LS_SQL_SH_IR_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQL_SH_IR_properties_typeProperties_server')]"
+					},
+					"LS_SQL_SH_IR_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQL_SH_IR_properties_typeProperties_database')]"
+					},
+					"LS_SQL_SH_IR_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQL_SH_IR_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

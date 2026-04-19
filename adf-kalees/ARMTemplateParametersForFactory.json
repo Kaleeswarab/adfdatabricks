@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-kalees"
+		},
+		"ADLS_Industry_adlsadfgitdatabricks_adfsource_accountKey": {
+			"value": ""
+		},
+		"LS_DB_Unity_Notebook_accessToken": {
+			"value": ""
+		},
+		"LS_SQL_SH_IR_password": {
+			"value": ""
+		},
+		"ADLS_Industry_adlsadfgitdatabricks_adfsource_properties_typeProperties_url": {
+			"value": "https://adlsadfgitdatabricks.dfs.core.windows.net/"
+		},
+		"LS_DB_Unity_Notebook_properties_typeProperties_existingClusterId": {
+			"value": "0419-174839-1s2lnyxu"
+		},
+		"LS_SQL_SH_IR_properties_typeProperties_server": {
+			"value": "KALEESW-WINDOWS\\SQLEXPRESS"
+		},
+		"LS_SQL_SH_IR_properties_typeProperties_database": {
+			"value": "adfsqldatabase"
+		},
+		"LS_SQL_SH_IR_properties_typeProperties_userName": {
+			"value": "kaleesadlf"
+		}
+	}
+}
