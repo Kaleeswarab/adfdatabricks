@@ -1,0 +1,13 @@
+{
+	"name": "LS_DB_Unity_Notebook",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-7405618284825121.1.azuredatabricks.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/64171b01-b8e2-4955-a5a2-29de6d81e10f/resourceGroups/acr-rg-private/providers/Microsoft.Databricks/workspaces/kalees-db",
+			"existingClusterId": "0419-174839-1s2lnyxu"
+		}
+	}
+}
