@@ -1,0 +1,21 @@
+{
+	"name": "LS_SQL_SH_IR",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "KALEESW-WINDOWS\\SQLEXPRESS",
+			"database": "adfsqldatabase",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "kaleesadlf",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmZjNhNTk4Zi04MWY2LTRkMDYtYTU3Mi00Zjc1MTExZTNmOGYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SH-My-Local-IR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

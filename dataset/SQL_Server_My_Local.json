@@ -1,0 +1,75 @@
+{
+	"name": "SQL_Server_My_Local",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQL_SH_IR",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "product_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "product_category_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "product_name_length",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "product_description_lenght",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "product_photos_qty",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "product_weight_g",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "product_length_cm",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "product_height_cm",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "product_width_cm",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

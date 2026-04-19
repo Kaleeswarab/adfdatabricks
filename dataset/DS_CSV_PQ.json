@@ -1,0 +1,21 @@
+{
+	"name": "DS_CSV_PQ",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_Industry_adlsadfgitdatabricks_adfsource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "csv-parqueet",
+				"fileSystem": "adfsource"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "adf-kalees",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b48b2fc0-3684-4d5e-b4d2-e51374b3a3ac",
+		"tenantId": "3ee16638-19a4-49ae-b26b-3d383073f516"
+	}
+}
